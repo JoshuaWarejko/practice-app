@@ -3,12 +3,13 @@
 debugger;
 
 var express = require('express');
-
+var bodyParser = require('body-parser');
 var app = express();
 
-app.use('/', function(req,res) {
-	res.sendFile(__dirname + '/www/index.html');
-});
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+
+app.use(express.static(__dirname + '/www'));
 
 var server = app.listen(3000, function() {
 	console.log('Server listening on', 3000);

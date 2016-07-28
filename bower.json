@@ -1,0 +1,23 @@
+{
+  "name": "practice-app",
+  "description": "",
+  "main": "server.js",
+  "authors": [
+    "Joshua Warejko <josh@newleaf.team>"
+  ],
+  "license": "UNLICENSED",
+  "homepage": "https://github.com/JoshuaWarejko/practice-app",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.8",
+    "angular-cookies": "^1.5.8",
+    "angular-ui-router": "^0.3.1"
+  }
+}

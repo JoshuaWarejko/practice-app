@@ -2,11 +2,12 @@
   "name": "practice-app",
   "version": "1.0.0",
   "description": "",
-  "main": "www/app.js",
+  "main": "server.js",
+  "author": "Joshua Warejko <josh@newleaf.team>",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./server"
   },
-  "author": "",
   "license": "UNLICENSED",
   "dependencies": {
     "body-parser": "^1.15.2",
