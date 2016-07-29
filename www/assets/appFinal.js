@@ -49,9 +49,9 @@ angular.module('app.routes', ['ui.router'])
 		templateUrl: 'views/home.html'
 	})
 	// Register
-	.state('register', {
+	.state('index.register', {
 		url: 'register',
-		templateUrl: 'views/register.html'
+		templateUrl: 'views/register.html',
 	});
 	
 	$locationProvider.html5Mode({
