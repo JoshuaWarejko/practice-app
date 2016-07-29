@@ -18,6 +18,9 @@
   "dependencies": {
     "angular": "^1.5.8",
     "angular-cookies": "^1.5.8",
-    "angular-ui-router": "^0.3.1"
+    "angular-ui-router": "^0.3.1",
+    "angular-bootstrap": "^2.0.0",
+    "angular-animate": "^1.5.8",
+    "angular-touch": "^1.5.8"
   }
 }

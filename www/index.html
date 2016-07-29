@@ -11,18 +11,24 @@
 	<title>Practice App</title>
 	<meta name="description" content="Practice App">
 
+	<!-- Load minified css -->
+	<link rel="stylesheet" type="text/css" href="lib/angular-bootstrap/ui-bootstrap-csp.css">
+	<link rel="stylesheet" type="text/css" href="./assets/styles.min.css">
+
 	<!-- Load AngularJS Framework -->
 	<script type="text/javascript" src="lib/angular/angular.min.js"></script>
+	<script type="text/javascript" src="lib/angular-animate/angular-animate.min.js"></script>
+	<script type="text/javascript" src="lib/angular-touch/angular-touch.min.js"></script>
 	<script type="text/javascript" src="lib/angular-cookies/angular-cookies.min.js"></script>
+	<script type="text/javascript" src="lib/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
 	<script type="text/javascript" src="lib/angular-ui-router/release/angular-ui-router.min.js"></script>
 
 	<!-- Load Header Scripts -->
-	<script type="text/javascript" src="js/app.js"></script>
-	<script type="text/javascript" src="js/routes.js"></script>
+	<script type="text/javascript" src="./assets/appFinal.min.js"></script>
 
 </head>
 
-<body ng-app="app">
+<body ng-app="app" ng-controller="MainController">
 	<div ui-view></div>
 </body>
 
