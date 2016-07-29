@@ -46,12 +46,12 @@ angular.module('app.routes', ['ui.router'])
 	// Homepage
 	.state('index', {
 		url: '/',
-		templateUrl: 'views/home.html'
+		templateUrl: '/views/home.html'
 	})
 	// Register
 	.state('index.register', {
 		url: 'register',
-		templateUrl: 'views/register.html',
+		templateUrl: '/views/register.html',
 	});
 	
 	$locationProvider.html5Mode({

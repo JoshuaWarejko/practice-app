@@ -18,13 +18,11 @@ db.on('error', console.error.bind(console, 'connection error:'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
-app.use('/assets', express.static(__dirname + './www/assets'));
-app.use('/js', express.static(__dirname + './www/js'));
-app.use('/lib', express.static(__dirname + './www/lib'));
-app.use('/scss', express.static(__dirname + './www/scss'));
-app.use('/views', express.static(__dirname + './www/views'));
+app.use('/', express.static(__dirname + './assets'));
+app.use('/', express.static(__dirname + './lib'));
+app.use('/', express.static(__dirname + './views'));
 
-app.use('/', require('./static'));
+app.use('/*', require('./static'));
 
 var server = app.listen(3000, function() {
 	console.log('Server listening on', 3000);
