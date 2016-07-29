@@ -4,7 +4,16 @@ debugger;
 
 var express = require('express');
 var bodyParser = require('body-parser');
+var mongoose = require('mongoose');
 var app = express();
+
+// mongodb connection
+mongoose.connect("mongodb://localhost:27017/bookworm", function() {
+	console.log("Mongodb Successfully Connected");
+});
+var db = mongoose.connection;
+// mongo error
+db.on('error', console.error.bind(console, 'connection error:'));
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));

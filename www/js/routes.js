@@ -11,6 +11,11 @@ angular.module('app.routes', ['ui.router'])
 	.state('index', {
 		url: '/',
 		templateUrl: 'views/home.html'
+	})
+	// Register
+	.state('register', {
+		url: 'register',
+		templateUrl: 'views/register.html'
 	});
 	
 	$locationProvider.html5Mode({

@@ -23,7 +23,17 @@ angular.module('app.directives', [])
 
 .directive('randomDirective', ["$scope", function($scope) {
 
-}]);
+}])
+
+// Header for site
+.directive('header', function() {
+	return {
+		restrict: 'E',
+		scope: false,
+		templateUrl: '../views/header.html'
+	}
+})
+;
 'use strict';
 
 angular.module('app.routes', ['ui.router'])
@@ -37,6 +47,11 @@ angular.module('app.routes', ['ui.router'])
 	.state('index', {
 		url: '/',
 		templateUrl: 'views/home.html'
+	})
+	// Register
+	.state('register', {
+		url: 'register',
+		templateUrl: 'views/register.html'
 	});
 	
 	$locationProvider.html5Mode({
