@@ -14,4 +14,12 @@ angular.module('app.directives', [])
 		templateUrl: '../views/header.html'
 	}
 })
+
+.directive('footer', function() {
+	return {
+		restrict: 'E',
+		scope: false,
+		templateUrl: '../views/footer.html'
+	}
+})
 ;
