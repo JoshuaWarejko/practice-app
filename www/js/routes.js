@@ -13,8 +13,8 @@ angular.module('app.routes', ['ui.router'])
 		templateUrl: '/views/home.html'
 	})
 	// Register
-	.state('index.register', {
-		url: 'register',
+	.state('register', {
+		url: '/register',
 		templateUrl: '/views/register.html',
 	});
 	

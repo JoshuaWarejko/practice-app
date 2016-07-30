@@ -11,7 +11,15 @@ angular.module('app.directives', [])
 	return {
 		restrict: 'E',
 		scope: false,
-		templateUrl: '../views/header.html'
+		templateUrl: '../templates/header.html'
+	}
+})
+// Header for site
+.directive('footer', function() {
+	return {
+		restrict: 'E',
+		scope: false,
+		templateUrl: '../templates/footer.html'
 	}
 })
 ;

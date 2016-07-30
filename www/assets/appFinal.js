@@ -30,7 +30,15 @@ angular.module('app.directives', [])
 	return {
 		restrict: 'E',
 		scope: false,
-		templateUrl: '../views/header.html'
+		templateUrl: '../templates/header.html'
+	}
+})
+// Header for site
+.directive('footer', function() {
+	return {
+		restrict: 'E',
+		scope: false,
+		templateUrl: '../templates/footer.html'
 	}
 })
 ;
@@ -49,8 +57,8 @@ angular.module('app.routes', ['ui.router'])
 		templateUrl: '/views/home.html'
 	})
 	// Register
-	.state('index.register', {
-		url: 'register',
+	.state('register', {
+		url: '/register',
 		templateUrl: '/views/register.html',
 	});
 	
