@@ -5,8 +5,8 @@ var app = angular.module('app', [
 	'ngTouch',
 	'ui.router',
 	'ui.bootstrap',
-	'app.controllers',
 	'app.services',
+	'app.controllers',
 	'app.directives'
 	]);
 app.run();
@@ -16,6 +16,17 @@ angular.module('app.controllers', [])
 
 .controller('MainController', ["$scope", function($scope) {
 
+}])
+.controller('NavigationController', ["$scope", "$location", "$state", function ($scope, $location, $state) {
+	$scope.isActive = function (viewLocation) {
+		var active = (viewLocation === $location.path());
+		return active;
+	};
+}])
+.controller('GetUserController', ['$scope', 'GetUsers', function($scope, GetUsers) {
+	GetUsers.fetchUsers().then(function(response) {
+		$scope.users = response.data;
+	});
 }]);
 'use strict';
 
@@ -31,6 +42,14 @@ angular.module('app.directives', [])
 		restrict: 'E',
 		scope: false,
 		templateUrl: '../templates/header.html'
+	}
+})
+// Navigaion for header
+.directive('navbar', function() {
+	return {
+		restrict: 'E',
+		scope: false,
+		templateUrl: '../templates/navbar.html'
 	}
 })
 // Header for site
@@ -60,6 +79,16 @@ angular.module('app.routes', ['ui.router'])
 	.state('register', {
 		url: '/register',
 		templateUrl: '/views/register.html',
+	})
+	// Login
+	.state('login', {
+		url: '/login',
+		templateUrl: '/views/login.html',
+	})
+	// Profile
+	.state('profile', {
+		url: '/profile',
+		templateUrl: '/views/profile.html',
 	});
 	
 	$locationProvider.html5Mode({
@@ -74,4 +103,10 @@ angular.module('app.services', [])
 
 .service('RandomService', ["$scope", function($scope) {
 
+}])
+
+.service('GetUsers', ['$http', function($http) {
+	this.fetchUsers = function() {
+		return $http.get("/api/users");
+	};
 }]);

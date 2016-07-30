@@ -18,6 +18,7 @@
 	<script type="text/javascript" src="/lib/angular-cookies/angular-cookies.min.js"></script>
 	<script type="text/javascript" src="/lib/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
 	<script type="text/javascript" src="/lib/angular-ui-router/release/angular-ui-router.min.js"></script>
+	<script type="text/javascript" src="/lib/ui-navbar/release/js/ui-navbar.min.js"></script>
 
 	<!-- Load minified css -->
 	<link rel="stylesheet" type="text/css" href="/lib/angular-bootstrap/ui-bootstrap-csp.css">
@@ -29,7 +30,7 @@
 
 </head>
 
-<body ng-app="app" ng-controller="MainController">
+<body ng-app="app" ng-controller="MainController" ng-init="logged_in_user = {req.user}">
 	<header></header>
 	<div ui-view></div>
 	<footer></footer>

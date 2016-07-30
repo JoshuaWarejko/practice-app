@@ -1,3 +1,19 @@
 <div ui-view>
-	<h1>This is the homepage</h1>
+	<div class="container">
+		<div class="content">
+			<h1>This is the homepage</h1>
+			<div class="current-users" ng-controller="GetUserController">
+				<h3>Current Users</h3>
+				<ul class="list-unstyled row">
+					<li class="col-sm-4" ng-repeat="user in users">
+						<h4>{{ user.name }}</h4>
+						<ul>
+							<li>Email: {{ user.email }}</li>
+							<li>Favoirte Programming Language: {{ user.favoriteProgrammingLang }}</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
 </div>

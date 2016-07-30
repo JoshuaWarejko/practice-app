@@ -5,8 +5,8 @@ var app = angular.module('app', [
 	'ngTouch',
 	'ui.router',
 	'ui.bootstrap',
-	'app.controllers',
 	'app.services',
+	'app.controllers',
 	'app.directives'
 	]);
 app.run();

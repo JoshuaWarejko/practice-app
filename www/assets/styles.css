@@ -1,2 +1,86 @@
+/* Whole Site Variables */
+/* Whole Site Mixins */
+html a, html li, html div, html body a, html body li, html body div, html body * a, html body * li, html body * div {
+  -webkit-transition: 0.3s ease all;
+  -ms-transition: 0.3s ease all;
+  -moz-transition: 0.3s ease all;
+  -o-transition: 0.3s ease all;
+  transition: 0.3s ease all; }
+
+/* Whole Site Font Stacks */
+/* Included Sass Files */
+nav.navbar {
+  margin: 0; }
+  nav.navbar a.navbar-brand {
+    height: auto;
+    max-width: 100px; }
+    nav.navbar a.navbar-brand img {
+      width: 100%; }
+
+/* Whole Site Styles */
+.col-xs-5th, .col-sm-5th, .col-md-5th, .col-lg-5th {
+  position: relative;
+  min-height: 1px;
+  padding-right: 10px;
+  padding-left: 10px; }
+
+.col-xs-5th {
+  width: 20%;
+  float: left; }
+
+@media (min-width: 768px) {
+  .col-sm-5th {
+    width: 20%;
+    float: left; } }
+
+@media (min-width: 992px) {
+  .col-md-5th {
+    width: 20%;
+    float: left; } }
+
+@media (min-width: 1200px) {
+  .col-lg-5th {
+    width: 20%;
+    float: left; } }
+
+html, html body {
+  overflow-x: hidden; }
+
+html, html body, html body * {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-decoration: none !important;
+  outline: none; }
+  html .btn, html body .btn, html body * .btn {
+    outline: none !important; }
+  html a, html body a, html body * a {
+    outline: none !important; }
+
 h1 {
-  color: #000; }
+  margin-top: 0; }
+
+.content {
+  padding: 50px 0; }
+  @media only screen and (max-width: 767px) {
+    .content {
+      padding: 25px 0; } }
+
+@media only screen and (max-width: 767px) {
+  .container {
+    max-width: 85%;
+    width: 85%;
+    margin: 0 auto; }
+  .center-mobile {
+    text-align: center; }
+  .block-mobile {
+    display: block; }
+  .hide-mobile {
+    display: none !important; } }
+
+.ng-animate.ng-scope {
+  -webkit-transition: none !important;
+  -ms-transition: none !important;
+  -moz-transition: none !important;
+  -o-transition: none !important;
+  transition: none !important; }

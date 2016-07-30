@@ -16,6 +16,16 @@ angular.module('app.routes', ['ui.router'])
 	.state('register', {
 		url: '/register',
 		templateUrl: '/views/register.html',
+	})
+	// Login
+	.state('login', {
+		url: '/login',
+		templateUrl: '/views/login.html',
+	})
+	// Profile
+	.state('profile', {
+		url: '/profile',
+		templateUrl: '/views/profile.html',
 	});
 	
 	$locationProvider.html5Mode({
